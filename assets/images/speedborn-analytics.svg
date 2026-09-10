@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="t d">
+<title id="t">Brand e Analytics — projeto Speedborn</title>
+<desc id="d">Representação editorial de uma leitura de atenção e comportamento no GA4.</desc>
+<rect width="1200" height="760" rx="40" fill="#f1eee7"/>
+<rect x="70" y="70" width="1060" height="620" rx="28" fill="#fffdf8" stroke="#d8d0c2"/>
+<text x="120" y="150" fill="#1a3c34" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="4">BRAND + ANALYTICS</text>
+<text x="120" y="230" fill="#1c1c1c" font-family="Arial, sans-serif" font-size="56" font-weight="700">Atenção antes de vaidade.</text>
+<text x="120" y="286" fill="#6d726f" font-family="Arial, sans-serif" font-size="24">Leitura de comportamento para orientar decisões de marca.</text>
+<path d="M130 550 C220 510 280 590 365 518 S520 395 610 460 S735 600 825 490 S970 330 1080 390" fill="none" stroke="#1a3c34" stroke-width="7" stroke-linecap="round"/>
+<circle cx="365" cy="518" r="12" fill="#c9882a"/><circle cx="610" cy="460" r="12" fill="#c9882a"/><circle cx="825" cy="490" r="12" fill="#c9882a"/>
+<line x1="130" y1="590" x2="1080" y2="590" stroke="#ddd5ca" stroke-width="2"/>
+<text x="120" y="650" fill="#8a8f8c" font-family="Arial, sans-serif" font-size="20">GA4 • engajamento • leitura de jornada • brand</text>
+</svg>

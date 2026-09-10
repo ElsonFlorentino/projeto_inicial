@@ -1,1 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="#eef5ff"/><text x="70" y="100" font-family="Arial" font-size="28" font-weight="700" fill="#315b8a">INTERNATIONAL SCHOOL · 2025</text><text x="70" y="230" font-family="Arial" font-size="72" font-weight="700" fill="#163a62">41% → 64%</text><text x="70" y="285" font-family="Arial" font-size="28" fill="#315b8a">pré-qualificação em 3 meses</text><text x="70" y="430" font-family="Arial" font-size="60" font-weight="700" fill="#163a62">517 MQLs · 123 SQLs</text><text x="70" y="560" font-family="Arial" font-size="28" fill="#315b8a">Mídia · RD Station · GA4/GTM · dashboards · IA</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="t d">
+<title id="t">International School — crescimento de MQL para SQL</title>
+<desc id="d">Visualização do funil com 517 MQLs, 123 SQLs e pré-qualificação de 41 para 64 por cento.</desc>
+<rect width="1200" height="760" rx="40" fill="#132f29"/>
+<circle cx="1000" cy="120" r="220" fill="#c9882a" opacity=".12"/>
+<circle cx="930" cy="640" r="310" fill="#f5f2eb" opacity=".045"/>
+<text x="86" y="118" fill="#c9882a" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="4">IN-HOUSE GROWTH • 2025</text>
+<text x="86" y="196" fill="#f5f2eb" font-family="Arial, sans-serif" font-size="54" font-weight="700">Mais qualidade no funil,</text>
+<text x="86" y="258" fill="#f5f2eb" font-family="Arial, sans-serif" font-size="54" font-weight="700">não só mais volume.</text>
+<path d="M110 370 H520 L455 565 H175 Z" fill="none" stroke="#f5f2eb" stroke-width="4" opacity=".55"/>
+<text x="195" y="435" fill="#f5f2eb" font-family="Arial, sans-serif" font-size="66" font-weight="700">517</text>
+<text x="340" y="431" fill="#d8d2c8" font-family="Arial, sans-serif" font-size="22">MQLs</text>
+<text x="230" y="530" fill="#c9882a" font-family="Arial, sans-serif" font-size="58" font-weight="700">123</text>
+<text x="362" y="526" fill="#d8d2c8" font-family="Arial, sans-serif" font-size="22">SQLs</text>
+<line x1="650" y1="378" x2="650" y2="568" stroke="#49645d" stroke-width="2"/>
+<text x="710" y="418" fill="#d8d2c8" font-family="Arial, sans-serif" font-size="24">Pré-qualificação</text>
+<text x="710" y="510" fill="#f5f2eb" font-family="Arial, sans-serif" font-size="68" font-weight="700">41%</text>
+<path d="M858 486 H955" stroke="#c9882a" stroke-width="4" stroke-linecap="round"/>
+<path d="M944 474 L959 486 L944 498" fill="none" stroke="#c9882a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="982" y="510" fill="#c9882a" font-family="Arial, sans-serif" font-size="68" font-weight="700">64%</text>
+<text x="86" y="682" fill="#9eb0a9" font-family="Arial, sans-serif" font-size="22">Mídia • jornadas • RD Station • GA4/GTM • dashboards • projeto de IA</text>
+</svg>

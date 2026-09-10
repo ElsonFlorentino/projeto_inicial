@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+<rect width="1200" height="760" rx="40" fill="#1a3c34"/>
+<circle cx="1040" cy="120" r="250" fill="#c9882a" opacity=".16"/>
+<path d="M720 610 C820 480 860 460 930 330 C985 230 1045 180 1130 130" fill="none" stroke="#c9882a" stroke-width="3" opacity=".6"/>
+<circle cx="820" cy="480" r="8" fill="#f5f2eb"/><circle cx="930" cy="330" r="8" fill="#f5f2eb"/><circle cx="1045" cy="180" r="8" fill="#f5f2eb"/>
+<text x="85" y="130" fill="#c9882a" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="4">DIAGNÓSTICO • MÍDIA • MENSURAÇÃO</text>
+<text x="85" y="230" fill="#f5f2eb" font-family="Arial,sans-serif" font-size="60" font-weight="700">Da visibilidade</text>
+<text x="85" y="298" fill="#f5f2eb" font-family="Arial,sans-serif" font-size="60" font-weight="700">ao agendamento.</text>
+<text x="85" y="390" fill="#c9d1ce" font-family="Arial,sans-serif" font-size="26">Estratégia integrada para mídia, site,</text>
+<text x="85" y="430" fill="#c9d1ce" font-family="Arial,sans-serif" font-size="26">WhatsApp, atendimento e mensuração.</text>
+<text x="85" y="650" fill="#c9882a" font-family="Arial,sans-serif" font-size="22" font-weight="700">KAYA RAÍZES PERFORMANCE • 2026</text>
+</svg>
