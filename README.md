@@ -1,3 +1,3 @@
-# Portfólio Elson Florentino
+# Portfólio — Elson Florentino
 
-Portfólio profissional de Growth & Performance Marketing.
+Growth & Performance Marketing.
