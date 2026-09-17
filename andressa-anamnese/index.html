@@ -8,55 +8,83 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=8">
+  <link rel="stylesheet" href="./styles.css?v=9">
 </head>
 <body>
   <header class="hero wrap">
     <div class="hero-copy">
-      <div class="brand-row"><div class="brand-name">Andressa</div><div class="heart">♡</div></div>
+      <div class="brand-row">
+        <div class="brand-name">Andressa</div>
+        <div class="heart">♡</div>
+      </div>
       <div class="brand-sub">MOVIMENTO PARA MAIS VOCÊ</div>
+
       <div class="eyebrow">VAMOS CONSTRUIR JUNTOS UM TREINO QUE TENHA A SUA CARA</div>
       <h1>Anamnese de Treino da Andressa</h1>
       <p class="lead">Quero entender o que você busca, como é a sua rotina e o que faz sentido pra você. Suas respostas vão me ajudar a montar um treino realmente personalizado.</p>
+
       <div class="hero-highlights">
         <div class="highlight"><span class="icon">✦</span><span>Treino pensado para sua rotina</span></div>
         <div class="highlight"><span class="icon">☼</span><span>Objetivos e preferências em primeiro lugar</span></div>
         <div class="highlight"><span class="icon">♡</span><span>Sem perguntas invasivas</span></div>
       </div>
+
       <div class="hand-note">Treinar também é se escolher todos os dias. ♡</div>
     </div>
+
     <div class="hero-photo-wrap">
       <div class="sun-shape"></div>
-      <img class="hero-photo" src="./assets/andressa-hero-hq.webp?v=8" alt="Andressa sorrindo com roupa amarela">
+      <img class="hero-photo" src="./assets/andressa-hero-hq.webp?v=9" alt="Andressa sorrindo com roupa amarela">
       <div class="photo-note top-note">Que bom ter você aqui! ♡</div>
       <div class="photo-note side-note">Seu ritmo.<br>Sua força.</div>
     </div>
   </header>
 
-  <div class="progress-wrap"><div class="progress-inner wrap"><span>Seu progresso</span><div class="progress-track"><div class="progress-fill" id="fill"></div></div><strong id="pct">0%</strong></div></div>
+  <div class="progress-wrap">
+    <div class="progress-inner wrap">
+      <span>Seu progresso</span>
+      <div class="progress-track"><div class="progress-fill" id="fill"></div></div>
+      <strong id="pct">0%</strong>
+    </div>
+  </div>
 
   <main class="wrap form-area">
     <form id="f" novalidate>
       <div class="form-grid">
         <section class="card" data-s>
           <div class="section-head"><span class="num">1</span><h2>Seu principal objetivo</h2></div>
-          <div class="field"><div class="legend">Qual é o seu principal objetivo com o treino?</div><div class="options vertical">
-            <label class="choice"><input type="radio" name="objetivo" value="Ganhar massa muscular"><span>Ganhar massa muscular</span></label>
-            <label class="choice"><input type="radio" name="objetivo" value="Melhorar definição muscular"><span>Melhorar definição muscular</span></label>
-            <label class="choice"><input type="radio" name="objetivo" value="Ganhar força"><span>Ganhar força</span></label>
-            <label class="choice"><input type="radio" name="objetivo" value="Melhorar condicionamento físico"><span>Melhorar condicionamento físico</span></label>
-            <label class="choice"><input type="radio" name="objetivo" value="Mais disposição e qualidade de vida"><span>Mais disposição e qualidade de vida</span></label>
-            <label class="choice"><input type="radio" name="objetivo" value="Desenvolver regiões específicas do corpo"><span>Desenvolver regiões específicas do corpo</span></label>
-            <label class="choice"><input type="radio" name="objetivo" value="Outro"><span>Outro</span></label>
-          </div></div>
+          <div class="field">
+            <div class="legend">Qual é o seu principal objetivo com o treino?</div>
+            <div class="options vertical">
+              <label class="choice"><input type="radio" name="objetivo" value="Ganhar massa muscular"><span>Ganhar massa muscular</span></label>
+              <label class="choice"><input type="radio" name="objetivo" value="Melhorar definição muscular"><span>Melhorar definição muscular</span></label>
+              <label class="choice"><input type="radio" name="objetivo" value="Ganhar força"><span>Ganhar força</span></label>
+              <label class="choice"><input type="radio" name="objetivo" value="Melhorar condicionamento físico"><span>Melhorar condicionamento físico</span></label>
+              <label class="choice"><input type="radio" name="objetivo" value="Mais disposição e qualidade de vida"><span>Mais disposição e qualidade de vida</span></label>
+              <label class="choice"><input type="radio" name="objetivo" value="Desenvolver regiões específicas do corpo"><span>Desenvolver regiões específicas do corpo</span></label>
+              <label class="choice"><input type="radio" name="objetivo" value="Outro"><span>Outro</span></label>
+            </div>
+          </div>
           <div class="field"><label class="legend" for="mudanca">Se quiser, me conte um pouco mais sobre o que você espera do treino</label><textarea id="mudanca" name="mudanca" placeholder="Ex.: quero me sentir mais forte, disposta e confiante..."></textarea></div>
         </section>
 
         <section class="card" data-s>
           <div class="section-head"><span class="num">2</span><h2>Regiões que você quer desenvolver</h2></div>
-          <div class="field"><div class="legend">Quais regiões gostaria de priorizar?</div><div class="options two-col">
-            <label class="choice check"><input type="checkbox" name="regioes" value="Glúteos"><span>Glúteos</span></label><label class="choice check"><input type="checkbox" name="regioes" value="Posterior de coxa"><span>Posterior de coxa</span></label><label class="choice check"><input type="checkbox" name="regioes" value="Quadríceps"><span>Quadríceps</span></label><label class="choice check"><input type="checkbox" name="regioes" value="Panturrilhas"><span>Panturrilhas</span></label><label class="choice check"><input type="checkbox" name="regioes" value="Abdômen/core"><span>Abdômen / core</span></label><label class="choice check"><input type="checkbox" name="regioes" value="Costas"><span>Costas</span></label><label class="choice check"><input type="checkbox" name="regioes" value="Ombros"><span>Ombros</span></label><label class="choice check"><input type="checkbox" name="regioes" value="Braços"><span>Braços</span></label><label class="choice check"><input type="checkbox" name="regioes" value="Peitoral"><span>Peitoral</span></label><label class="choice check"><input type="checkbox" name="regioes" value="Corpo inteiro"><span>Corpo inteiro</span></label>
-          </div></div>
+          <div class="field">
+            <div class="legend">Quais regiões gostaria de priorizar?</div>
+            <div class="options two-col">
+              <label class="choice check"><input type="checkbox" name="regioes" value="Glúteos"><span>Glúteos</span></label>
+              <label class="choice check"><input type="checkbox" name="regioes" value="Posterior de coxa"><span>Posterior de coxa</span></label>
+              <label class="choice check"><input type="checkbox" name="regioes" value="Quadríceps"><span>Quadríceps</span></label>
+              <label class="choice check"><input type="checkbox" name="regioes" value="Panturrilhas"><span>Panturrilhas</span></label>
+              <label class="choice check"><input type="checkbox" name="regioes" value="Abdômen/core"><span>Abdômen / core</span></label>
+              <label class="choice check"><input type="checkbox" name="regioes" value="Costas"><span>Costas</span></label>
+              <label class="choice check"><input type="checkbox" name="regioes" value="Ombros"><span>Ombros</span></label>
+              <label class="choice check"><input type="checkbox" name="regioes" value="Braços"><span>Braços</span></label>
+              <label class="choice check"><input type="checkbox" name="regioes" value="Peitoral"><span>Peitoral</span></label>
+              <label class="choice check"><input type="checkbox" name="regioes" value="Corpo inteiro"><span>Corpo inteiro</span></label>
+            </div>
+          </div>
           <div class="field"><div class="legend">Quais seriam suas 3 maiores prioridades?</div><div class="priority-grid"><select name="p1"><option value="">1ª prioridade</option></select><select name="p2"><option value="">2ª prioridade</option></select><select name="p3"><option value="">3ª prioridade</option></select></div></div>
           <div class="field"><label class="legend">Ponto forte que gostaria de manter</label><input type="text" name="forte" placeholder="Ex.: pernas, força, resistência..."></div>
           <div class="field"><label class="legend">Região que gostaria de desenvolver mais</label><input type="text" name="fraco" placeholder="Ex.: glúteos, braços, core..."></div>
@@ -65,7 +93,10 @@
         <section class="card" data-s>
           <div class="section-head"><span class="num">3</span><h2>Sua experiência com musculação</h2></div>
           <div class="field"><div class="legend">Atualmente você treina musculação?</div><div class="options vertical">
-            <label class="choice"><input type="radio" name="treina" value="Sim, regularmente"><span>Sim, regularmente</span></label><label class="choice"><input type="radio" name="treina" value="Sim, mas de forma irregular"><span>Sim, mas de forma irregular</span></label><label class="choice"><input type="radio" name="treina" value="Estou voltando agora"><span>Estou voltando agora</span></label><label class="choice"><input type="radio" name="treina" value="Nunca treinei"><span>Nunca treinei</span></label>
+            <label class="choice"><input type="radio" name="treina" value="Sim, regularmente"><span>Sim, regularmente</span></label>
+            <label class="choice"><input type="radio" name="treina" value="Sim, mas de forma irregular"><span>Sim, mas de forma irregular</span></label>
+            <label class="choice"><input type="radio" name="treina" value="Estou voltando agora"><span>Estou voltando agora</span></label>
+            <label class="choice"><input type="radio" name="treina" value="Nunca treinei"><span>Nunca treinei</span></label>
           </div></div>
           <div class="field"><label class="legend">Há quanto tempo você treina ou já treinou?</label><select name="tempo"><option value="">Selecione</option><option>Menos de 6 meses</option><option>6 meses a 1 ano</option><option>1 a 2 anos</option><option>2 a 5 anos</option><option>Mais de 5 anos</option></select></div>
           <div class="field"><label class="legend">Como você considera seu nível atual?</label><select name="nivel"><option value="">Selecione</option><option>Iniciante</option><option>Intermediário</option><option>Avançado</option><option>Não sei avaliar</option></select></div>
@@ -76,7 +107,13 @@
           <div class="field"><label class="legend">Quantos dias por semana você realmente consegue treinar?</label><select name="freq"><option value="">Selecione</option><option>2 dias</option><option>3 dias</option><option>4 dias</option><option>5 dias</option><option>6 dias</option></select></div>
           <div class="field"><label class="legend">Quanto tempo você tem disponível para cada treino?</label><select name="tempoTreino"><option value="">Selecione</option><option>Até 30 minutos</option><option>30 a 45 minutos</option><option>45 a 60 minutos</option><option>60 a 75 minutos</option><option>Mais de 75 minutos</option></select></div>
           <div class="field"><div class="legend">Quais dias normalmente funcionam melhor para você?</div><div class="options days-grid">
-            <label class="choice check"><input type="checkbox" name="dias" value="Segunda"><span>Segunda</span></label><label class="choice check"><input type="checkbox" name="dias" value="Terça"><span>Terça</span></label><label class="choice check"><input type="checkbox" name="dias" value="Quarta"><span>Quarta</span></label><label class="choice check"><input type="checkbox" name="dias" value="Quinta"><span>Quinta</span></label><label class="choice check"><input type="checkbox" name="dias" value="Sexta"><span>Sexta</span></label><label class="choice check"><input type="checkbox" name="dias" value="Sábado"><span>Sábado</span></label><label class="choice check"><input type="checkbox" name="dias" value="Domingo"><span>Domingo</span></label>
+            <label class="choice check"><input type="checkbox" name="dias" value="Segunda"><span>Segunda</span></label>
+            <label class="choice check"><input type="checkbox" name="dias" value="Terça"><span>Terça</span></label>
+            <label class="choice check"><input type="checkbox" name="dias" value="Quarta"><span>Quarta</span></label>
+            <label class="choice check"><input type="checkbox" name="dias" value="Quinta"><span>Quinta</span></label>
+            <label class="choice check"><input type="checkbox" name="dias" value="Sexta"><span>Sexta</span></label>
+            <label class="choice check"><input type="checkbox" name="dias" value="Sábado"><span>Sábado</span></label>
+            <label class="choice check"><input type="checkbox" name="dias" value="Domingo"><span>Domingo</span></label>
           </div></div>
           <div class="field"><label class="legend">Existe algum dia em que você prefere descansar?</label><select name="descanso"><option value="">Selecione</option><option>Segunda</option><option>Terça</option><option>Quarta</option><option>Quinta</option><option>Sexta</option><option>Sábado</option><option>Domingo</option><option>Não tenho preferência</option></select></div>
         </section>
@@ -85,38 +122,87 @@
           <div class="section-head"><span class="num">5</span><h2>Preferências no treino</h2></div>
           <div class="field"><label class="legend">Existem exercícios que você gosta muito de fazer?</label><textarea name="gosta" placeholder="Ex.: agachamento, leg press, elevação pélvica..."></textarea></div>
           <div class="field"><label class="legend">Existem exercícios que você não gosta ou prefere evitar?</label><textarea name="naogosta" placeholder="Ex.: stiff, afundo, abdominal..."></textarea></div>
-          <div class="field"><div class="legend">Você prefere treinos mais curtos e intensos ou mais longos e com mais exercícios?</div><div class="options vertical"><label class="choice"><input type="radio" name="estilo" value="Mais curtos e intensos"><span>Mais curtos e intensos</span></label><label class="choice"><input type="radio" name="estilo" value="Mais longos e com mais exercícios"><span>Mais longos e com mais exercícios</span></label><label class="choice"><input type="radio" name="estilo" value="Depende, gosto dos dois"><span>Depende, gosto dos dois</span></label></div></div>
-          <div class="field"><div class="legend">Você gosta de treinar próximo do seu limite de esforço?</div><div class="options vertical"><label class="choice"><input type="radio" name="limite" value="Sim"><span>Sim</span></label><label class="choice"><input type="radio" name="limite" value="Às vezes"><span>Às vezes</span></label><label class="choice"><input type="radio" name="limite" value="Prefiro treinos mais moderados"><span>Prefiro treinos mais moderados</span></label></div></div>
+          <div class="field"><div class="legend">Você prefere treinos mais curtos e intensos ou mais longos e com mais exercícios?</div><div class="options vertical">
+            <label class="choice"><input type="radio" name="estilo" value="Mais curtos e intensos"><span>Mais curtos e intensos</span></label>
+            <label class="choice"><input type="radio" name="estilo" value="Mais longos e com mais exercícios"><span>Mais longos e com mais exercícios</span></label>
+            <label class="choice"><input type="radio" name="estilo" value="Depende, gosto dos dois"><span>Depende, gosto dos dois</span></label>
+          </div></div>
+          <div class="field"><div class="legend">Você gosta de treinar próximo do seu limite de esforço?</div><div class="options vertical">
+            <label class="choice"><input type="radio" name="limite" value="Sim"><span>Sim</span></label>
+            <label class="choice"><input type="radio" name="limite" value="Às vezes"><span>Às vezes</span></label>
+            <label class="choice"><input type="radio" name="limite" value="Prefiro treinos mais moderados"><span>Prefiro treinos mais moderados</span></label>
+          </div></div>
           <div class="field"><label class="legend">Você prefere utilizar mais máquinas, pesos livres, polia ou uma combinação?</label><select name="equip"><option value="">Selecione</option><option>Mais máquinas</option><option>Mais pesos livres</option><option>Mais polia</option><option>Uma combinação de todos</option><option>Não tenho preferência</option></select></div>
         </section>
 
         <div class="stack-col">
           <section class="card" data-s>
             <div class="section-head"><span class="num">6</span><h2>Estrutura disponível</h2></div>
-            <div class="field"><div class="legend">Onde você pretende realizar os treinos?</div><div class="options vertical"><label class="choice"><input type="radio" name="local" value="Academia completa"><span>Academia completa</span></label><label class="choice"><input type="radio" name="local" value="Academia de condomínio"><span>Academia de condomínio</span></label><label class="choice"><input type="radio" name="local" value="Em casa"><span>Em casa</span></label><label class="choice"><input type="radio" name="local" value="Outro"><span>Outro</span></label></div></div>
+            <div class="field"><div class="legend">Onde você pretende realizar os treinos?</div><div class="options vertical">
+              <label class="choice"><input type="radio" name="local" value="Academia completa"><span>Academia completa</span></label>
+              <label class="choice"><input type="radio" name="local" value="Academia de condomínio"><span>Academia de condomínio</span></label>
+              <label class="choice"><input type="radio" name="local" value="Em casa"><span>Em casa</span></label>
+              <label class="choice"><input type="radio" name="local" value="Outro"><span>Outro</span></label>
+            </div></div>
             <div class="field"><label class="legend">Existe algum equipamento que você sabe que não terá disponível?</label><textarea name="indisponivel" placeholder="Ex.: hack, cadeira extensora, halteres acima de 10 kg..."></textarea></div>
           </section>
+
           <section class="card" data-s>
             <div class="section-head"><span class="num">7</span><h2>Conforto e limitações</h2></div>
-            <div class="field"><div class="legend">Existe alguma região em que você sente dor, desconforto ou limitação durante exercícios?</div><div class="options two-col"><label class="choice"><input type="radio" name="dor" value="Não"><span>Não</span></label><label class="choice"><input type="radio" name="dor" value="Sim"><span>Sim</span></label></div><div class="conditional" id="dor-extra"><textarea name="dorDetalhe" placeholder="Se quiser, conte onde costuma incomodar e em quais movimentos."></textarea></div></div>
+            <div class="field"><div class="legend">Existe alguma região em que você sente dor, desconforto ou limitação durante exercícios?</div><div class="options two-col">
+              <label class="choice"><input type="radio" name="dor" value="Não"><span>Não</span></label>
+              <label class="choice"><input type="radio" name="dor" value="Sim"><span>Sim</span></label>
+            </div><div class="conditional" id="dor-extra"><textarea name="dorDetalhe" placeholder="Se quiser, conte onde costuma incomodar e em quais movimentos."></textarea></div></div>
             <div class="field"><label class="legend">Existe algum exercício que você evita por desconforto ou insegurança?</label><textarea name="evita" placeholder="Ex.: agachamento livre, corrida, desenvolvimento..."></textarea></div>
-            <div class="field"><div class="legend">Existe alguma recomendação médica ou profissional que eu deva considerar?</div><div class="options two-col"><label class="choice"><input type="radio" name="medica" value="Não"><span>Não</span></label><label class="choice"><input type="radio" name="medica" value="Sim"><span>Sim</span></label></div><div class="conditional" id="med-extra"><textarea name="medicaDetalhe" placeholder="Ex.: fisioterapia, cirurgia, orientação profissional..."></textarea></div></div>
+            <div class="field"><div class="legend">Existe alguma recomendação médica ou profissional que eu deva considerar?</div><div class="options two-col">
+              <label class="choice"><input type="radio" name="medica" value="Não"><span>Não</span></label>
+              <label class="choice"><input type="radio" name="medica" value="Sim"><span>Sim</span></label>
+            </div><div class="conditional" id="med-extra"><textarea name="medicaDetalhe" placeholder="Ex.: fisioterapia, cirurgia, orientação profissional..."></textarea></div></div>
           </section>
         </div>
 
         <section class="card full-card" data-s>
           <div class="section-head"><span class="num">8</span><h2>O treino ideal para você</h2></div>
-          <div class="final-grid"><div class="field"><label class="legend">O que faria você sentir que esse treino foi realmente feito para você?</label><textarea name="feito" placeholder="Ex.: perceber evolução, ter mais energia, gostar dos exercícios..."></textarea></div><div class="field"><label class="legend">Existe algo que você gostaria de encontrar nesse treino e que normalmente não encontra em fichas de academia?</label><textarea name="naofalta" placeholder="Ex.: mais mobilidade, progressão clara, variações de exercícios..."></textarea></div><div class="field"><label class="legend">Se pudesse resumir em uma frase o resultado que gostaria de alcançar, qual seria?</label><textarea name="frase" placeholder="Escreva do seu jeito."></textarea></div></div>
+          <div class="final-grid">
+            <div class="field"><label class="legend">O que faria você sentir que esse treino foi realmente feito para você?</label><textarea name="feito" placeholder="Ex.: perceber evolução, ter mais energia, gostar dos exercícios..."></textarea></div>
+            <div class="field"><label class="legend">Existe algo que você gostaria de encontrar nesse treino e que normalmente não encontra em fichas de academia?</label><textarea name="naofalta" placeholder="Ex.: mais mobilidade, progressão clara, variações de exercícios..."></textarea></div>
+            <div class="field"><label class="legend">Se pudesse resumir em uma frase o resultado que gostaria de alcançar, qual seria?</label><textarea name="frase" placeholder="Escreva do seu jeito."></textarea></div>
+          </div>
         </section>
       </div>
 
-      <section class="submit-card"><div class="submit-note"><div class="submit-script">Obrigada por compartilhar um pouco sobre você. ♡</div><p>Com essas respostas, consigo montar um treino mais coerente com seus objetivos, sua rotina e suas preferências.</p></div><div class="submit-actions"><button type="button" class="btn primary" id="finish">Enviar respostas <span>→</span></button><button type="button" class="btn ghost" id="clear">Limpar respostas</button><small>Suas respostas ficam salvas apenas neste aparelho até você decidir compartilhar.</small></div></section>
+      <section class="submit-card">
+        <div class="submit-note">
+          <div class="submit-script">Obrigada por compartilhar um pouco sobre você. ♡</div>
+          <p>Com essas respostas, consigo montar um treino mais coerente com seus objetivos, sua rotina e suas preferências.</p>
+        </div>
+        <div class="submit-actions">
+          <button type="button" class="btn primary" id="finish">Enviar respostas <span>→</span></button>
+          <button type="button" class="btn ghost" id="clear">Limpar respostas</button>
+          <small>Suas respostas ficam salvas apenas neste aparelho até você decidir compartilhar.</small>
+        </div>
+      </section>
     </form>
   </main>
 
-  <footer class="footer wrap"><span class="footer-script">Cuidar de você também é se escolher. ♡</span><span class="footer-mark">ANDRESSA · MOVIMENTO PARA MAIS VOCÊ</span></footer>
-  <dialog id="out"><button class="close" id="close" aria-label="Fechar">×</button><h2>Resumo das suas respostas</h2><p class="modal-copy">Você pode compartilhar, copiar ou salvar esse conteúdo.</p><div class="summary" id="summary"></div><div class="modal-actions"><button class="btn primary" id="shareBtn">Compartilhar</button><button class="btn ghost" id="copyBtn">Copiar</button><button class="btn ghost" id="downloadBtn">Salvar .txt</button></div></dialog>
+  <footer class="footer wrap">
+    <span class="footer-script">Cuidar de você também é se escolher. ♡</span>
+    <span class="footer-mark">ANDRESSA · MOVIMENTO PARA MAIS VOCÊ</span>
+  </footer>
+
+  <dialog id="out">
+    <button class="close" id="close" aria-label="Fechar">×</button>
+    <h2>Resumo das suas respostas</h2>
+    <p class="modal-copy">Você pode compartilhar, copiar ou salvar esse conteúdo.</p>
+    <div class="summary" id="summary"></div>
+    <div class="modal-actions">
+      <button class="btn primary" id="shareBtn">Compartilhar</button>
+      <button class="btn ghost" id="copyBtn">Copiar</button>
+      <button class="btn ghost" id="downloadBtn">Salvar .txt</button>
+    </div>
+  </dialog>
+
   <div class="toast" id="toast">Copiado!</div>
-  <script src="./app.js?v=8"></script>
+  <script src="./app.js?v=9"></script>
 </body>
 </html>
