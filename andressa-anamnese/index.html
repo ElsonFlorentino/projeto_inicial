@@ -1,259 +1,122 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#f4c542">
-  <title>Anamnese de Treino — Andressa</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --ink:#1f2430;
-      --muted:#6f685c;
-      --gold:#f4c542;
-      --gold-deep:#d9a51a;
-      --cream:#fffaf0;
-      --paper:#fffdf8;
-      --line:#eadfca;
-      --soft:#fff6d8;
-      --shadow:0 18px 50px rgba(78,61,27,.10);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      background:linear-gradient(180deg,#fffaf0 0%,#fffdf8 42%,#fff8ec 100%);
-      color:var(--ink);
-      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      line-height:1.5;
-    }
-    .wrap{width:min(1120px,calc(100% - 28px));margin:auto}
-    .top{padding:16px 0 8px}
-    .brand{display:flex;align-items:center;gap:10px;font-family:Caveat,cursive;color:#1e2430}
-    .brand .name{font-size:46px;line-height:1;font-weight:700}
-    .brand .sub{font-family:Inter,sans-serif;letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:#7c745f;font-weight:700;margin-top:8px}
-    .hero{
-      margin:8px auto 24px;
-      border:1px solid #efdba8;
-      border-radius:30px;
-      background:
-        radial-gradient(circle at 84% 14%, rgba(255,226,138,.85), transparent 29%),
-        radial-gradient(circle at 88% 74%, rgba(245,197,66,.28), transparent 24%),
-        linear-gradient(135deg,#fffdf8 0%,#fff4c7 100%);
-      padding:44px;
-      display:grid;
-      grid-template-columns:1.08fr .92fr;
-      gap:28px;
-      align-items:center;
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      position:relative;
-    }
-    .hero:before,.hero:after{
-      content:"";
-      position:absolute;
-      border-radius:999px;
-      background:rgba(244,197,66,.18);
-      filter:blur(2px);
-      z-index:0;
-    }
-    .hero:before{width:340px;height:340px;right:-80px;top:-90px}
-    .hero:after{width:240px;height:240px;left:-90px;bottom:-110px}
-    .hero-copy,.hero-visual{position:relative;z-index:1}
-    .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:#9a6d00}
-    h1,h2{font-family:"DM Serif Display",serif;font-weight:400}
-    h1{font-size:clamp(42px,6vw,66px);line-height:.98;margin:10px 0 16px;color:#1f2430}
-    .lead{max-width:640px;color:#5b564d;font-size:17px}
-    .hero-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
-    .point{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,.55);border:1px solid rgba(225,206,153,.55);padding:12px 13px;border-radius:16px}
-    .point b{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#fff5cb;color:#c28c00;font-size:16px;flex:none}
-    .point span{font-size:13px;line-height:1.35;color:#5d5447;font-weight:600}
-    .script{font-family:Caveat,cursive;font-size:32px;color:#6b5114;margin-top:14px;line-height:1.04}
-    .hero-visual{display:flex;justify-content:center;align-items:center;min-height:420px}
-    .photo-shell{
-      position:relative;
-      width:min(100%,430px);
-      aspect-ratio:4/5;
-      border-radius:34px;
-      display:flex;
-      align-items:flex-end;
-      justify-content:center;
-      padding:18px;
-      background:
-        radial-gradient(circle at 25% 15%, rgba(255,255,255,.95), transparent 24%),
-        linear-gradient(155deg,#f6c637 0%,#ffe588 100%);
-      box-shadow:0 22px 55px rgba(110,82,12,.22);
-      overflow:hidden;
-      isolation:isolate;
-    }
-    .blob1,.blob2,.leaf-a,.leaf-b{position:absolute;z-index:0;pointer-events:none}
-    .blob1{width:92%;height:92%;border-radius:45% 55% 50% 50% / 45% 50% 50% 55%;background:rgba(255,247,214,.62);right:-7%;top:7%}
-    .blob2{width:58%;height:58%;border-radius:50%;background:rgba(255,224,122,.56);left:-8%;bottom:6%}
-    .leaf-a,.leaf-b{width:120px;height:120px;opacity:.22;background:linear-gradient(180deg,#87620c,#c19520);clip-path:path('M60 0 C55 25, 40 45, 20 60 C40 66, 56 85, 60 120 C64 85, 80 66, 100 60 C80 45, 65 25, 60 0 Z')}
-    .leaf-a{left:10px;top:24px;transform:rotate(-25deg)}
-    .leaf-b{right:10px;bottom:24px;transform:rotate(24deg)}
-    .hero-img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:center top;
-      border-radius:28px;
-      position:relative;
-      z-index:1;
-      filter:saturate(1.03) contrast(1.02);
-    }
-    .hello-badge{
-      position:absolute;
-      top:18px;
-      right:18px;
-      z-index:2;
-      background:rgba(255,251,241,.92);
-      border:1px solid rgba(234,223,202,.95);
-      border-radius:999px;
-      padding:10px 14px;
-      box-shadow:0 8px 20px rgba(0,0,0,.08);
-      font-family:Caveat,cursive;
-      font-size:24px;
-      color:#5b4511;
-      line-height:1;
-    }
-    .hero-note{position:absolute;left:16px;bottom:20px;z-index:2;background:rgba(255,250,238,.86);padding:14px 16px;border-radius:18px;max-width:68%;backdrop-filter:blur(8px);border:1px solid rgba(233,220,181,.75)}
-    .hero-note strong{display:block;font-family:Caveat,cursive;font-size:28px;line-height:1;color:#624c15}
-    .hero-note small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#7b715f;font-weight:800;margin-top:4px}
-    .progress{position:sticky;top:0;z-index:25;background:rgba(255,250,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid #eadfc8}
-    .pi{width:min(1120px,calc(100% - 28px));margin:auto;display:flex;gap:12px;align-items:center;padding:10px 0;font-size:12px;font-weight:800;color:#5d564b}
-    .track{height:8px;background:#ede4d3;flex:1;border-radius:999px;overflow:hidden}
-    .fill{height:100%;width:0;background:linear-gradient(90deg,#dfa61d,#ffd85b)}
-    main{padding:28px 0 56px}
-    form{display:grid;gap:18px}
-    .sec{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 10px 30px rgba(78,61,27,.06)}
-    .head{display:flex;gap:12px;align-items:center;margin-bottom:18px}
-    .num{width:38px;height:38px;border-radius:50%;background:var(--gold);display:grid;place-items:center;font-weight:800;color:#3b2d0f;box-shadow:inset 0 -2px 0 rgba(0,0,0,.08)}
-    .head h2{font-size:28px;margin:0;color:#1f2430}
-    .hint{font-size:12px;color:var(--muted)}
-    .field{display:grid;gap:8px}
-    .field + .field{margin-top:16px}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .legend{font-size:14px;font-weight:700;color:#312d24}
-    textarea,input[type=text],select{
-      width:100%;border:1px solid #ddd3c1;background:#fff;border-radius:13px;padding:13px 14px;outline:none;color:var(--ink);font-size:15px;
-    }
-    textarea{min-height:92px;resize:vertical}
-    textarea:focus,input[type=text]:focus,select:focus{border-color:#d6a30e;box-shadow:0 0 0 4px rgba(244,197,66,.17)}
-    .opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-    .opts.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .choice{position:relative}
-    .choice input{position:absolute;opacity:0;inset:0}
-    .choice label{display:flex;align-items:center;gap:10px;min-height:48px;padding:11px 12px;border:1px solid #e2d8c8;border-radius:13px;background:#fff;cursor:pointer;font-size:14px;color:#383327;transition:.2s}
-    .choice label:before{content:"";width:18px;height:18px;border:2px solid #b9aa8b;border-radius:50%;flex:none;transition:.2s;Background:#fff}
-    .check label:before{border-radius:5px}
-    .choice input:checked + label{background:#fff3bd;border-color:#e0ae25;box-shadow:0 6px 18px rgba(224,174,37,.18)}
-    .choice input:checked + label:before{background:#e3ad18;box-shadow:inset 0 0 0 4px #fff;border-color:#d3a11b}
-    .check input:checked + label:before{box-shadow:none}
-    .days{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
-    .cond{display:none}
-    .cond.show{display:grid;margin-top:10px}
-    .final{background:#222326;color:#fff;border:0;padding-top:26px;padding-bottom:26px}
-    .final .head h2,.final .legend{color:#fff}
-    .final .hint{color:#cfc8bc}
-    .actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .btn{border:0;border-radius:999px;padding:14px 22px;font-weight:800;font-size:15px;cursor:pointer;transition:.2s}
-    .btn:hover{transform:translateY(-1px)}
-    .primary{background:linear-gradient(90deg,#e7b326,#ffd85c);color:#221f18;min-width:220px;box-shadow:0 10px 24px rgba(231,179,38,.32)}
-    .secondary{background:#fff;border:1px solid #d9cdb7;color:#514b42}
-    .privacy{text-align:center;font-size:12px;color:#7a7265;margin-top:12px}
-    .final .privacy{color:#d3cabd}
-    .foot{text-align:center;padding:28px 12px 40px;color:#776f62}
-    .foot strong{font-family:Caveat,cursive;font-size:30px;color:#5b4718}
-    dialog{border:0;border-radius:22px;max-width:700px;width:calc(100% - 28px);padding:22px;background:#fffdf8;box-shadow:0 30px 80px rgba(0,0,0,.25)}
-    dialog::backdrop{background:rgba(0,0,0,.55)}
-    .summary{white-space:pre-wrap;background:#fff6d4;border:1px solid #ead698;border-radius:14px;padding:14px;max-height:48vh;overflow:auto;font-size:13px;color:#2e2b25}
-    .ma{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.ma button{flex:1}
-    .close{float:right;border:0;background:transparent;font-size:25px;cursor:pointer;color:#554c3f}
-    .toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;background:#222;color:#fff;border-radius:999px;padding:10px 14px;font-size:12px;transition:.2s;z-index:40}
-    .toast.show{opacity:1;transform:translate(-50%,0)}
-    @media(max-width:980px){hero{grid-template-columns:1fr;padding:30px 22px}.hero-visual{min-height:340px}.hero-points{grid-template-columns:1fr}}
-    @media(max-width:760px){.wrap{width:min(100% - 18px,680px)}.sec{padding:20px 15px}.grid,.opts,.opts.three{grid-template-columns:1fr}.days{grid-template-columns:1fr 1fr}.actions{display:grid}.actions .btn{width:100%}.ma{display:grid}.brand .name{font-size:40px}.hero-note{max-width:76%}.hello-badge{font-size:21px;padding:9px 12px}}
-    @media(max-width:440px){h1{font-size:40px}.days{grid-template-columns:1fr!}.brand .name{font-size:36px}.hero{border-radius:24px}.photo-shell{border-radius:26px}.hero-note{left:10px;bottom:12px;max-width:82%}.hero-note strong{font-size:24px}.script{font-size:28px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f4c542">
+<title>Anamnese de Treino — Andressa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <header class="top">
-    <div class="wrap brand">
-      <div>
-        <div class="name">Andressa ♡</div>
-        <div class="sub">movimento para mais você</div>
-      </div>
+<header class="top"><div class="wrap brand"><div><div class="name">Andressa ♡</div><div class="sub">movimento para mais você</div></div></div></header>
+<section class="wrap hero">
+  <div class="hero-copy">
+    <div class="eyebrow">Conhecer você é o primeiro passo</div>
+    <h1>Anamnese de Treino — Andressa</h1>
+    <p class="lead">Um formulário leve para entender seus objetivos, sua rotina e suas preferências — sem peso, medidas corporais ou perguntas invasivas.</p>
+    <div class="hero-points">
+      <div class="point"><b>♡</b><span>Mais do que treino: bem-estar, consistência e autocuidado.</span></div>
+      <div class="point"><b>✦</b><span>Planejamento pensado para respeitar a sua rotina de verdade.</span></div>
+      <div class="point"><b>☼</b><span>Seu treino vai nascer da sua história, e não de uma ficha genérica.</span></div>
     </div>
-  </header>
-
-  <section class="wrap hero">
-    <div class="hero-copy">
-      <div class="eyebrow">Conhecer você é o primeiro passo</div>
-      <h1>Anamnese de Treino — Andressa</h1>
-      <p class="lead">Um formulário leve para entender seus objetivos, sua rotina e suas preferências — sem peso, medidas corporais ou perguntas invasivas.</p>
-      <div class="hero-points">
-        <div class="point"><b>♡</b><span>Mais do que treino: bem-estar, consistência e autocuidado.</span></div>
-        <div class="point"><b>✨</b><span>Planejamento pensado para respeitar a sua rotina de verdade.</span></div>
-        <div class="point"><b>☀</b><span>Seu treino vai nascer da sua história, e não de uma ficha genérica.</span></div>
-      </div>
-      <div class="script">Seu ritmo. Sua força. Seu treino.</div>
-    </div>
-
-    <div class="hero-visual">
-      <div class="photo-shell">
-        <div class="blob1"></div>
-        <div class="blob2"></div>
-        <div class="leaf-a"></div>
-        <div class="leaf-b"></div>
-        <div class="hello-badge">que bom ter você aqui!</div>
-        <img class="hero-img" src="./assets/andressa-hero.webp" alt="Andressa sorrindo, usando conjunto amarelo">
-        <div class="hero-note">
-          <strong>forte sem deixar de ser leve.</strong>
-          <small>sensíível • independente • inteira</small>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="progress">
-    <div class="pi">Seu progresso<div class="track"><div class="fill" id="fill"></div></div><span id="pct">0%</span></div>
+    <div class="script">Seu ritmo. Sua força. Seu treino.</div>
   </div>
+  <div class="hero-visual">
+    <div class="photo-shell">
+      <div class="blob blob-a"></div><div class="blob blob-b"></div>
+      <div class="hello-badge">que bom ter você aqui!</div>
+      <img class="hero-img" src="./assets/andressa-hero.webp" alt="Andressa sorrindo, usando conjunto amarelo">
+      <div class="hero-note"><strong>forte sem deixar de ser leve.</strong><small>sensível • independente • inteira</small></div>
+    </div>
+  </div>
+</section>
+<div class="progress"><div class="pi">Seu progresso<div class="track"><div class="fill" id="fill"></div></div><span id="pct">0%</span></div></div>
+<main class="wrap"><form id="f">
+<section class="sec" data-s>
+<div class="head"><div class="num">1</div><div><h2>Seu principal objetivo</h2><div class="hint">O que você mais quer conquistar agora?</div></div></div>
+<div class="field"><div class="legend">Qual é o seu principal objetivo com o treino?</div><div class="opts">
+<label class="choice"><input required type="radio" name="objetivo" value="Ganhar massa muscular"><span>Ganhar massa muscular</span></label>
+<label class="choice"><input type="radio" name="objetivo" value="Melhorar definição muscular"><span>Melhorar definição muscular</span></label>
+<label class="choice"><input type="radio" name="objetivo" value="Ganhar força"><span>Ganhar força</span></label>
+<label class="choice"><input type="radio" name="objetivo" value="Melhorar condicionamento físico"><span>Melhorar condicionamento físico</span></label>
+<label class="choice"><input type="radio" name="objetivo" value="Melhorar disposição e qualidade de vida"><span>Mais disposição e qualidade de vida</span></label>
+<label class="choice"><input type="radio" name="objetivo" value="Desenvolver regiões específicas do corpo"><span>Desenvolver regiões específicas do corpo</span></label>
+<label class="choice"><input type="radio" name="objetivo" value="Outro"><span>Outro</span></label>
+</div></div>
+<div class="field"><label class="legend" for="mudanca">Se pudesse escolher uma principal mudança para perceber com o treino, qual seria?</label><textarea id="mudanca" name="mudanca" placeholder="Ex.: me sentir mais forte, disposta, confiante..."></textarea></div>
+</section>
 
-  <main class="wrap">
-    <form id="f">
-      <section class="sec" data-s>
-        <div class="head"><div class="num">1</div><div><h2>Seu principal objetivo</h2><div class="hint">O que você mais quer conquistar agora?</div></div></div>
-        <div class="field">
-          <div class="legend">Qual é o seu principal objetivo com o treino?</div>
-          <div class="opts">
-            <div class="choice"><input required type="radio" name="objetivo" id="o1" value="Ganhar massa muscular"><label for="o1">Ganhar massa muscular</label></div>
-            <div class="choice"><input type="radio" name="objetivo" id="o2" value="Melhorar definição muscular"><label for="o2">Melhorar definição muscular</label></div>
-            <div class="choice"><input type="radio" name="objetivo" id="o3" value="Ganhar força"><label for="o3">Ganhar força</label></div>
-            <div class="choice"><input type="radio" name="objetivo" id="o4" value="Melhorar condicionamento físico"><label for="o4">Melhorar condicionamento físico</label></div>
-            <div class="choice"><input type="radio" name="objetivo" id="o5" value="Melhorar disposição e qualidade de vida"><label for="o5">Melhorar disposição e qualidade de vida</label></div>
-            <div class="choice"><input type="radio" name="objetivo" id="o6" value="Desenvolver regiões específicas do corpo"><label for="o6">Desenvolver regiões específicas do corpo</label></div>
-            <div class="choice"><input type="radio" name="objetivo" id="o7" value="Outro"><label for="o7">Outro</label></div>
-          </div>
-        </div>
-        <div class="field">
-          <label class="legend">Se pudesse escolher uma principal mudança para perceber com o treino, qual seria?</label>
-          <textarea name="mudanca" placeholder="Ex.: me sentir mais forte, disposta, confiante..."></textarea>
-        </div>
-      </section>
+<section class="sec" data-s>
+<div class="head"><div class="num">2</div><div><h2>Regiões que você quer desenvolver</h2><div class="hint">Marque quantas quiser.</div></div></div>
+<div class="field"><div class="legend">Quais regiões gostaria de priorizar?</div><div class="opts three">
+<label class="choice check"><input type="checkbox" name="regioes" value="Glúteos"><span>Glúteos</span></label>
+<label class="choice check"><input type="checkbox" name="regioes" value="Posterior de coxa"><span>Posterior de coxa</span></label>
+<label class="choice check"><input type="checkbox" name="regioes" value="Quadríceps"><span>Quadríceps</span></label>
+<label class="choice check"><input type="checkbox" name="regioes" value="Panturrilhas"><span>Panturrilhas</span></label>
+<label class="choice check"><input type="checkbox" name="regioes" value="Abdômen/core"><span>Abdômen / core</span></label>
+<label class="choice check"><input type="checkbox" name="regioes" value="Costas"><span>Costas</span></label>
+<label class="choice check"><input type="checkbox" name="regioes" value="Ombros"><span>Ombros</span></label>
+<label class="choice check"><input type="checkbox" name="regioes" value="Braços"><span>Braços</span></label>
+<label class="choice check"><input type="checkbox" name="regioes" value="Peitoral"><span>Peitoral</span></label>
+<label class="choice check"><input type="checkbox" name="regioes" value="Corpo inteiro"><span>Corpo inteiro</span></label>
+</div></div>
+<div class="field"><div class="legend">Suas 3 maiores prioridades</div><div class="priority-grid"><select name="p1"><option value="">1ª prioridade</option></select><select name="p2"><option value="">2ª prioridade</option></select><select name="p3"><option value="">3ª prioridade</option></select></div></div>
+<div class="grid"><div class="field"><label class="legend" for="forte">Ponto forte que gostaria de manter</label><input id="forte" type="text" name="forte" placeholder="Ex.: pernas, resistência..."></div><div class="field"><label class="legend" for="fraco">Região que gostaria de desenvolver mais</label><input id="fraco" type="text" name="fraco" placeholder="Ex.: glúteos, braços, core..."></div></div>
+</section>
 
-      <section class="sec" data-s>
-        <div class="head"><div class="num">2</div><div><h2>Regiões que quer desenvolver</h2><div class="hint">Marque quantas quiser.</div></div></div>
-        <div class="field">
-          <div class="legend">Quais regiões gostaria de priorizar?</div>
-          <div class="opts three">
-            <div class="choice check"><input type="checkbox" name="regioes" id="r1" value="Glúteos"><label for="r1">Glúteos</label></div>
-            <div class="choice check"><input type="checkbox" name="regioes" id="r2" value="Posterior de coxa"><label for="r2">Posterior de coxa</label></div>
-            <div class="choice check"><input type="checkbox" name="regioes" id="r3" value="Quadríceps"><label for="r3">Quadríceps</label></div>
-            <div class="choice check"><input type="checkbox" name="regioes" id="r4" value="Panturrilhas"><label for="r4">Panturrilhas</label></div>
-            <div class="choice check"><input type="checkbox" name="regioes" id="r5" value="Abdômen/core"><label for="r5">Abdômen / core</label></div>
-            <div class="choice check"><input type="checkbox" name="regioes" id="r6" value="Costas"><label for="r6">Costas</label></div>
-            <div class="choice check"><input type="checkbox" name="regioes" id="r7" value="Ombros"><label for="r7">Ombros</label></div>
-            <div class="choice check"><input type="checkbox" name="regioes" id="r8"
+<section class="sec" data-s>
+<div class="head"><div class="num">3</div><div><h2>Sua experiência com musculação</h2><div class="hint">Só para ajustar o treino ao seu momento.</div></div></div>
+<div class="grid"><div class="field"><div class="legend">Atualmente você treina musculação?</div><div class="opts">
+<label class="choice"><input type="radio" name="treina" value="Sim, regularmente"><span>Sim, regularmente</span></label>
+<label class="choice"><input type="radio" name="treina" value="Sim, mas irregularmente"><span>Sim, mas irregularmente</span></label>
+<label class="choice"><input type="radio" name="treina" value="Estou voltando agora"><span>Estou voltando agora</span></label>
+<label class="choice"><input type="radio" name="treina" value="Nunca treinei"><span>Nunca treinei</span></label>
+</div></div><div><div class="field"><label class="legend">Há quanto tempo você treina ou já treinou?</label><select name="tempo"><option value="">Selecione</option><option>Menos de 6 meses</option><option>6 meses a 1 ano</option><option>1 a 2 anos</option><option>2 a 5 anos</option><option>Mais de 5 anos</option></select></div><div class="field"><label class="legend">Como considera seu nível atual?</label><select name="nivel"><option value="">Selecione</option><option>Iniciante</option><option>Intermediário</option><option>Avançado</option><option>Não sei avaliar</option></select></div></div></div>
+</section>
+
+<section class="sec" data-s>
+<div class="head"><div class="num">4</div><div><h2>Sua rotina de treino</h2><div class="hint">Pra montar algo que realmente caiba na sua vida.</div></div></div>
+<div class="grid"><div class="field"><label class="legend">Quantos dias por semana você realmente consegue treinar?</label><select name="freq"><option value="">Selecione</option><option>2 dias</option><option>3 dias</option><option>4 dias</option><option>5 dias</option><option>6 dias</option></select></div><div class="field"><label class="legend">Quanto tempo você tem disponível para cada treino?</label><select name="tempoTreino"><option value="">Selecione</option><option>Até 30 minutos</option><option>30–45 minutos</option><option>45–60 minutos</option><option>60–75 minutos</option><option>Mais de 75 minutos</option></select></div></div>
+<div class="field"><div class="legend">Quais dias da semana normalmente funcionam melhor para você?</div><div class="days">
+<label class="choice check"><input type="checkbox" name="dias" value="Segunda"><span>Segunda</span></label><label class="choice check"><input type="checkbox" name="dias" value="Terça"><span>Terça</span></label><label class="choice check"><input type="checkbox" name="dias" value="Quarta"><span>Quarta</span></label><label class="choice check"><input type="checkbox" name="dias" value="Quinta"><span>Quinta</span></label><label class="choice check"><input type="checkbox" name="dias" value="Sexta"><span>Sexta</span></label><label class="choice check"><input type="checkbox" name="dias" value="Sábado"><span>Sábado</span></label><label class="choice check"><input type="checkbox" name="dias" value="Domingo"><span>Domingo</span></label>
+</div></div>
+<div class="field"><label class="legend">Existe algum dia em que você prefere descansar?</label><select name="descanso"><option value="">Selecione</option><option>Segunda</option><option>Terça</option><option>Quarta</option><option>Quinta</option><option>Sexta</option><option>Sábado</option><option>Domingo</option><option>Não tenho preferência</option></select></div>
+</section>
+
+<section class="sec" data-s>
+<div class="head"><div class="num">5</div><div><h2>Preferências no treino</h2><div class="hint">Pra deixar o treino mais a sua cara.</div></div></div>
+<div class="field"><label class="legend">Existem exercícios que você gosta muito de fazer?</label><textarea name="gosta" placeholder="Ex.: agachamento, leg press, elevação pélvica..."></textarea></div>
+<div class="field"><label class="legend">Existem exercícios que você não gosta ou prefere evitar?</label><textarea name="naogosta" placeholder="Ex.: stiff, afundo, exercícios de braço, abdominal..."></textarea></div>
+<div class="grid"><div class="field"><div class="legend">Você prefere treinos mais curtos e intensos ou mais longos e com mais exercícios?</div><div class="opts single-col"><label class="choice"><input type="radio" name="estilo" value="Mais curtos e intensos"><span>Mais curtos e intensos</span></label><label class="choice"><input type="radio" name="estilo" value="Mais longos e com mais exercícios"><span>Mais longos e com mais exercícios</span></label><label class="choice"><input type="radio" name="estilo" value="Depende / gosto dos dois"><span>Depende / gosto dos dois</span></label></div></div><div class="field"><div class="legend">Você gosta de treinar próximo do seu limite de esforço?</div><div class="opts single-col"><label class="choice"><input type="radio" name="limite" value="Sim"><span>Sim</span></label><label class="choice"><input type="radio" name="limite" value="Às vezes"><span>Às vezes</span></label><label class="choice"><input type="radio" name="limite" value="Prefiro treinos mais moderados"><span>Prefiro treinos mais moderados</span></label></div></div></div>
+<div class="field"><label class="legend">Você prefere utilizar mais máquinas, pesos livres, polia, ou uma combinação de todos?</label><select name="equip"><option value="">Selecione</option><option>Mais máquinas</option><option>Mais pesos livres</option><option>Mais polia</option><option>Uma combinação de todos</option><option>Não tenho preferência</option></select></div>
+</section>
+
+<section class="sec" data-s>
+<div class="head"><div class="num">6</div><div><h2>Estrutura disponível</h2><div class="hint">Para encaixar os exercícios no ambiente real.</div></div></div>
+<div class="field"><div class="legend">Onde você pretende realizar os treinos?</div><div class="opts"><label class="choice"><input type="radio" name="local" value="Academia completa"><span>Academia completa</span></label><label class="choice"><input type="radio" name="local" value="Academia de condomínio"><span>Academia de condomínio</span></label><label class="choice"><input type="radio" name="local" value="Em casa"><span>Em casa</span></label><label class="choice"><input type="radio" name="local" value="Outro"><span>Outro</span></label></div></div>
+<div class="field"><label class="legend">Existe algum equipamento que você sabe que não terá disponível?</label><textarea name="indisponivel" placeholder="Ex.: hack, cadeira extensora, halteres acima de 10 kg..."></textarea></div>
+</section>
+
+<section class="sec" data-s>
+<div class="head"><div class="num">7</div><div><h2>Conforto e limitações</h2><div class="hint">Só o que for importante para montar um treino seguro.</div></div></div>
+<div class="field"><div class="legend">Atualmente existe alguma região em que você sente dor, desconforto ou limitação durante exercícios?</div><div class="opts"><label class="choice"><input type="radio" name="dor" value="Não"><span>Não</span></label><label class="choice"><input type="radio" name="dor" value="Sim"><span>Sim</span></label></div><div class="cond" id="dor-extra"><textarea name="dorDetalhe" placeholder="Se quiser, descreva onde e como costuma incomodar."></textarea></div></div>
+<div class="field"><label class="legend">Existe algum exercício que você evita por sentir desconforto ou insegurança ao executar?</label><textarea name="evita" placeholder="Ex.: agachamento livre, corrida, desenvolvimento..."></textarea></div>
+<div class="field"><div class="legend">Existe alguma recomendação médica ou profissional que eu deva considerar?</div><div class="opts"><label class="choice"><input type="radio" name="medica" value="Não"><span>Não</span></label><label class="choice"><input type="radio" name="medica" value="Sim"><span>Sim</span></label></div><div class="cond" id="med-extra"><textarea name="medicaDetalhe" placeholder="Ex.: lesão, cirurgia, orientação profissional, fisioterapia..."></textarea></div></div>
+</section>
+
+<section class="sec final" data-s>
+<div class="head"><div class="num">8</div><div><h2>O treino ideal para você</h2><div class="hint">A parte mais importante: como você quer se sentir com esse processo.</div></div></div>
+<div class="field"><label class="legend">O que faria você considerar que esse treino foi realmente feito para você?</label><textarea name="feito" placeholder="Ex.: ver resultado, ter mais energia, gostar do processo, sentir consistência..."></textarea></div>
+<div class="field"><label class="legend">Existe algo que você gostaria que tivesse no treino e que normalmente não encontra em fichas de academia?</label><textarea name="naofalta" placeholder="Ex.: mais mobilidade, progressão mais clara, exercícios específicos..."></textarea></div>
+<div class="field"><label class="legend">Se você pudesse definir em uma frase o resultado que deseja alcançar com esse treino, qual seria?</label><textarea name="frase" placeholder="Ex.: uma versão mais forte, saudável e confiante de mim."></textarea></div>
+<div class="actions"><button type="button" class="btn primary" id="finish">Finalizar e compartilhar</button><button type="button" class="btn secondary" id="clear">Limpar respostas</button></div><div class="privacy">As respostas ficam apenas no seu aparelho até você decidir compartilhar.</div>
+</section>
+</form></main>
+<div class="foot"><strong>Obrigada por compartilhar um pouco da sua história.</strong><div>Suas respostas vão ajudar a criar um treino pensado com carinho, intenção e coerência com a sua rotina.</div></div>
+<dialog id="out"><button class="close" id="close" aria-label="Fechar">×</button><h2>Resumo das suas respostas</h2><p class="hint">Você pode copiar, compartilhar ou baixar esse conteúdo.</p><div class="summary" id="summary"></div><div class="ma"><button class="btn primary" id="shareBtn">Compartilhar</button><button class="btn secondary" id="copyBtn">Copiar</button><button class="btn secondary" id="downloadBtn">Baixar .txt</button></div></dialog>
+<div class="toast" id="toast">Copiado!</div>
+<script src="./app.js"></script>
+</body></html>
