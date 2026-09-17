@@ -1,3 +1,20 @@
+async function loadHighQualityHero(){
+  const img=document.querySelector('.hero-img');
+  if(!img)return;
+  try{
+    const files=['01','02','03','04','05','06','07a','07b','08a','08b'];
+    const chunks=await Promise.all(files.map(async n=>{
+      const r=await fetch(`./assets/hq/${n}.txt?v=7`);
+      if(!r.ok)throw new Error(`Não foi possível carregar ${n}`);
+      return (await r.text()).trim();
+    }));
+    img.src='data:image/webp;base64,'+chunks.join('');
+  }catch(e){
+    console.warn('Não foi possível carregar a foto em alta qualidade.',e);
+  }
+}
+loadHighQualityHero();
+
 const form=document.getElementById('f');
 const fields=[...form.querySelectorAll('input,textarea,select')];
 const fill=document.getElementById('fill');
