@@ -1,5 +1,3 @@
-async function loadHighQualityHero(){const img=document.querySelector('.hero-photo');if(!img)return;try{const files=['01','02','03','04','05','06','07a','07b','08a','08b'];const chunks=await Promise.all(files.map(async n=>{const r=await fetch(`./assets/hq/${n}.txt?v=8`);if(!r.ok)throw new Error(n);return (await r.text()).trim()}));img.src='data:image/webp;base64,'+chunks.join('')}catch(e){img.src='./assets/andressa-hero.webp?v=8'}}
-loadHighQualityHero();
 const form=document.getElementById('f');
 const fields=[...form.querySelectorAll('input,textarea,select')];
 const fill=document.getElementById('fill');
