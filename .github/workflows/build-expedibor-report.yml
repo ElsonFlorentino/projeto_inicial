@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "tmp-expedibor/trigger.txt"
+      - "tmp-expedibor2/trigger.txt"
 
 permissions:
   contents: write
@@ -22,15 +22,15 @@ jobs:
       - name: Assemble and commit PDF
         shell: bash
         run: |
-          if [ ! -f tmp-expedibor/trigger.txt ]; then
+          if [ ! -f tmp-expedibor2/trigger.txt ]; then
             exit 0
           fi
 
           mkdir -p relatorios/expedibor
-          cat tmp-expedibor/chunk-*.txt | tr -d '\r\n' | base64 --decode > relatorios/expedibor/Relatorio_Executivo_Expedibor_MetaAds_MinasParts_2026.pdf
+          cat tmp-expedibor2/chunk-*.txt | tr -d '\r\n' | base64 --decode > relatorios/expedibor/Relatorio_Executivo_Expedibor_MetaAds_MinasParts_2026.pdf
           test -s relatorios/expedibor/Relatorio_Executivo_Expedibor_MetaAds_MinasParts_2026.pdf
 
-          rm -rf tmp-expedibor
+          rm -rf tmp-expedibor tmp-expedibor2
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
