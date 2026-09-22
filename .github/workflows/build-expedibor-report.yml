@@ -1,0 +1,39 @@
+name: Build Expedibor report PDF
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "tmp-expedibor/trigger.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  build-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Assemble and commit PDF
+        shell: bash
+        run: |
+          if [ ! -f tmp-expedibor/trigger.txt ]; then
+            exit 0
+          fi
+
+          mkdir -p relatorios/expedibor
+          cat tmp-expedibor/chunk-*.txt | tr -d '\r\n' | base64 --decode > relatorios/expedibor/Relatorio_Executivo_Expedibor_MetaAds_MinasParts_2026.pdf
+          test -s relatorios/expedibor/Relatorio_Executivo_Expedibor_MetaAds_MinasParts_2026.pdf
+
+          rm -rf tmp-expedibor
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Adiciona relatório executivo Expedibor"
+          git push
